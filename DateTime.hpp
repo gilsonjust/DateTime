@@ -173,29 +173,29 @@ private:
 
     enum weekDay
     {
-        DOMINGO,
-        SEGUNDA_FEIRA,
-        TERCA_FEIRA,
-        QUARTA_FEIRA,
-        QUINTA_FEIRA,
-        SEXTA_FEIRA,
-        SABADO
+        SUNDAY,
+        MONDAY,
+        TUESDAY,
+        WEDNESDAY,
+        THURSDAY,
+        FRIDAY,
+        SATURDAY
     };
 
     std::string getWeekDayAsStr(int weekDay)
     {
         switch (weekDay)
         {
-            case weekDay::DOMINGO: return "Domingo";
-            case weekDay::SEGUNDA_FEIRA: return "Segunda-feira";
-            case weekDay::TERCA_FEIRA: return "Terca-feira";
-            case weekDay::QUARTA_FEIRA: return "Quarta-feira";
-            case weekDay::QUINTA_FEIRA: return "Quinta-feira";
-            case weekDay::SEXTA_FEIRA: return "Sexta-feira";
-            case weekDay::SABADO: return "Sabado";
+            case weekDay::SUNDAY:    return "Sunday";
+            case weekDay::MONDAY:    return "Monday";
+            case weekDay::TUESDAY:   return "Tuesday";
+            case weekDay::WEDNESDAY: return "Wednesday";
+            case weekDay::THURSDAY:  return "Thursday";
+            case weekDay::FRIDAY:    return "Friday";
+            case weekDay::SATURDAY:  return "Saturday";
         }
 
-        return "Dia da semana invalido!";
+        return "Invalid weekday!";
     }
 };
 
