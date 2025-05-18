@@ -24,6 +24,8 @@ int main()
 	cout << dt.getFormatedStr("DD/MM/YYYY WW") << endl;
 	cout << dt.getFormatedStr("hh:mm:ss") << endl;
 	cout << dt.getFormatedStr("WW") << endl;
+	cout << dt.getFormatedStr("DD/MMM/YYYY WW") << endl;
+	cout << dt.getFormatedStr("MMM") << endl;
 	cout << endl;
 
 	return EXIT_SUCCESS;

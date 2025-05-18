@@ -24,6 +24,7 @@ public:
         WW = Weekday
         DD = Day
         MM = Month
+        MMM = MonthName
         YYYY = Year
     */
     std::string getFormatedStr(std::string format)
@@ -61,6 +62,13 @@ public:
             {
                 oss.str(""); oss.clear();
                 oss << FORMATED_TWO_DIGITS(m_day);
+                result += oss.str();
+                i++;
+            }
+            else if (format.substr(i, 3) == "MMM")
+            {
+                oss.str(""); oss.clear();
+                oss << getMonthName(m_month);
                 result += oss.str();
                 i++;
             }
@@ -197,6 +205,45 @@ private:
 
         return "Invalid weekday!";
     }
+
+    enum monthName
+    {
+        NONE,
+        JANUARY,
+        FEBRUARY,
+        MARCH,
+        APRIL,
+        MAY,
+        JUNE,
+        JULY,
+        AUGUST,
+        SEPTEMBER,
+        OCTOBER,
+        NOVEMBER,
+        DECEMBER
+    };
+
+    std::string getMonthName(int month)
+    {
+        switch (month)
+        {
+            case JANUARY:   return "January";
+            case FEBRUARY:  return "February";
+            case MARCH:     return "March";
+            case APRIL:     return "April";
+            case MAY:       return "May";
+            case JUNE:      return "June";
+            case JULY:      return "July";
+            case AUGUST:    return "August";
+            case SEPTEMBER: return "September";
+            case OCTOBER:   return "October";
+            case NOVEMBER:  return "November";
+            case DECEMBER:  return "December";
+        }
+        
+        return "Invalid month!";
+    }
+
 };
 
 #endif
