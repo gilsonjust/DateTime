@@ -29,6 +29,9 @@ public:
     */
     std::string getFormatedStr(std::string format)
     {
+        if (format.empty())
+            return "";
+
         updateDateTime();
 
         std::ostringstream oss;
